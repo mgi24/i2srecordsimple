@@ -5,15 +5,17 @@
 #define SDMMC_CMD   38
 #define SDMMC_D0    40  
 
+//ubah pin ini bila beda gpio
 #define I2S_MIC_SERIAL_CLOCK 3
 #define I2S_MIC_LEFT_RIGHT_CLOCK 1
 #define I2S_MIC_SERIAL_DATA 14
 
-#define SAMPLE_BUFFER_SIZE 1024
+//setting wav
+#define SAMPLE_BUFFER_SIZE 1024//LOWER THIS IF CRASH / cut on audio
 #define SAMPLE_RATE 48000
 #define BITRATE 16
 #define CHANNEL 1;
-#define GAIN 1.0  // Faktor penguatan
+
 // don't mess around with this
 i2s_config_t i2s_config = {
     .mode = (i2s_mode_t)(I2S_MODE_MASTER | I2S_MODE_RX),
